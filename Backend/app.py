@@ -7,21 +7,16 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from flask_cors import CORS
-from dotenv import load_dotenv
-import os 
+
 
 from time import sleep
 app = Flask(__name__)
 CORS(app)
 
-load_dotenv()
-email=os.getenv("email",None)
-password=os.getenv("password",None)
 
-print(email,password)
 
 # Selenium configuration 
-CHROMEDRIVER_PATH = 'C:/Users/mayur/OneDrive/Desktop/Dexy_Assignment/chromedriver-win64/chromedriver-win64/chromedriver.exe'
+CHROMEDRIVER_PATH = 'C:/Users/mayur/OneDrive/Desktop/Dexy_Assignment/Backend/chromedriver-win64/chromedriver-win64/chromedriver.exe'
 
 thread_url = 'https://wellfound.com/jobs/messages/966450047'
 
@@ -51,35 +46,38 @@ def send_message(message: str = None):
         sleep(2) 
         driver.delete_all_cookies()
 
-        with open('cookies.json', 'r') as f:
+        cookie_fields = ["name","value","expiry"]
+
+        with open('cookies.json','r')as f:
             cookies = json.load(f)
             for cookie in cookies:
-                driver.add_cookie(cookie)
+
+                updated = {
+                    k: v
+                    for k, v in cookie.items()
+                    if v is not None
+                    and k
+                    in cookie_fields
+                }
+                if "expirationDate" in cookie:
+                    updated["expiry"] = int(cookie["expirationDate"])
+
+                print(f"Adding cookies for: {updated['name']}")
+                try:
+                    driver.add_cookie(updated)
+                except Exception as e:
+                    print(f"Error adding cookie {updated['name']}: {str(e)}")
+                
+        
 
         sleep(5)
         driver.refresh()
-        driver.get("https://wellfound.com/login")
-
-
-
-        email_input = driver.find_element(By.ID, "user_email")
-        password_input = driver.find_element(By.ID, "user_password")
-        login_button = driver.find_element(By.NAME, "commit")
-        
-
-
-        print("Typing email...")
-        human_like_typing(email_input, email)
-        sleep(1)  # Small pause before typing password
-
-        print("Typing password...")
-        human_like_typing(password_input, password)
+      
         sleep(1)
-
-       
-        print("Clicking login button...")
-        login_button.click()
-        sleep(5)
+        driver.execute_script("window.scrollTo(0, Math.random() * 0.4 * window.innerHeight + 0.5 * window.innerHeight);")
+        
+        sleep(2)
+        
         driver.get(thread_url)
         sleep(1)
         message_input_box = None
@@ -93,6 +91,7 @@ def send_message(message: str = None):
                 message_input_box = driver.find_element(By.NAME, "body")
             except Exception as error:
                 return {"status": "error", "message": "input box not found "}
+        sleep(2)
         print("Typing message....")
         human_like_typing(message_input_box,message)
         sleep(1)
@@ -106,9 +105,6 @@ def send_message(message: str = None):
     except Exception as error:
         print(error)
         return {"status": "error", "message": "Failed to send message"}
-@app.route("/", methods=["GET"])
-def index():
-    return render_template("index.html")
 
 @app.route("/send-message", methods=["GET"])
 def runSend_Message():

@@ -1,58 +1,131 @@
 [
-    {
-      "name": "iterableEndUserId",
-      "value": "mayurrohokale1041@gmail.com"
-    },
-    {
-      "name": "ajs_anonymous_id",
-      "value": "df033b0f-43a2-454d-aebb-dc00b1039408"
-    },
-    {
-      "name": "_ga",
-      "value": "GA1.1.1650137208.1697798533"
-    },
-    {
-      "name": "ajs_user_id",
-      "value": "17159624"
-    },
-    {
-      "name": "_hjSessionUser_1444722",
-      "value": "eyJpZCI6IjhiN2NhNjIyLWY0MjUtNTgzMS04YzU0LWFiNmU3NTk1ZmQ4OCIsImNyZWF0ZWQiOjE2OTc3OTg1MzI5MzQsImV4aXN0aW5nIjp0cnVlfQ"
-    },
-    {
-      "name": "_hjMinimizedPolls",
-      "value": "995874"
-    },
-    {
+  {
+      "domain": ".wellfound.com",
+      "expirationDate": 1766127110,
+      "hostOnly": false,
+      "httpOnly": false,
       "name": "_hjDonePolls",
+      "path": "/",
+      "sameSite": "no_restriction",
+      "secure": true,
+      "session": false,
+      "storeId": null,
       "value": "995874"
-    },
-    {
-      "name": "logged_in",
-      "value": "true"
-    },
-    {
-      "name": "_clck",
-      "value": "jwtac1|2|frs|1|1513"
-    },
-    {
-      "name": "_clsk",
-      "value": "lboto1|1734433489804|2|1|q.clarity.ms/collect"
-    },
-    {
-      "name": "_hjHasCachedUserAttributes",
-      "value": "true"
-    },
-    {
+  },
+  {
+      "domain": ".wellfound.com",
+      "expirationDate": 1734614540,
+      "hostOnly": false,
+      "httpOnly": false,
       "name": "_hjSession_1444722",
-      "value": "eyJpZCI6ImIwZmM4MjI0LWVkODktNDFiZS1iNjMxLWI4Yjk0OGIxMmRlYyIsImMiOjE3MzQ0OTYyNzQ4ODQsInMiOjEsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MX0"
-    },
-    {
-      "name": "_ga_705F94181H",
-      "value": "GS1.1.1734496259.151.1.1734496701.55.0.0"
-    },
-    {
+      "path": "/",
+      "sameSite": "no_restriction",
+      "secure": true,
+      "session": false,
+      "storeId": null,
+      "value": "eyJpZCI6ImNkYjlhM2U0LTliNDYtNGIyMy1iODY5LWViMDM2MDYxNzZhYSIsImMiOjE3MzQ2MDkyNjY3MzMsInMiOjEsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MH0="
+  },
+  {
+      "domain": ".wellfound.com",
+      "expirationDate": 1766148785,
+      "hostOnly": false,
+      "httpOnly": false,
+      "name": "ajs_anonymous_id",
+      "path": "/",
+      "sameSite": "lax",
+      "secure": true,
+      "session": false,
+      "storeId": null,
+      "value": "df033b0f-43a2-454d-aebb-dc00b1039408"
+  },
+  {
+      "domain": ".wellfound.com",
+      "expirationDate": 1766148785,
+      "hostOnly": false,
+      "httpOnly": false,
+      "name": "ajs_user_id",
+      "path": "/",
+      "sameSite": "lax",
+      "secure": true,
+      "session": false,
+      "storeId": null,
+      "value": "17159624"
+  },
+  {
+      "domain": ".wellfound.com",
+      "expirationDate": 1766148785,
+      "hostOnly": false,
+      "httpOnly": false,
+      "name": "_hjSessionUser_1444722",
+      "path": "/",
+      "sameSite": "no_restriction",
+      "secure": true,
+      "session": false,
+      "storeId": null,
+      "value": "eyJpZCI6IjhiN2NhNjIyLWY0MjUtNTgzMS04YzU0LWFiNmU3NTk1ZmQ4OCIsImNyZWF0ZWQiOjE2OTc3OTg1MzI5MzQsImV4aXN0aW5nIjp0cnVlfQ=="
+  },
+  {
+      "domain": "wellfound.com",
+      "hostOnly": true,
+      "httpOnly": false,
+      "name": "_hjHasCachedUserAttributes",
+      "path": "/",
+      "sameSite": "no_restriction",
+      "secure": true,
+      "session": true,
+      "storeId": null,
+      "value": "true"
+  },
+  {
+      "domain": ".wellfound.com",
+      "expirationDate": 1742042657,
+      "hostOnly": false,
+      "httpOnly": false,
+      "name": "_hjMinimizedPolls",
+      "path": "/",
+      "sameSite": "no_restriction",
+      "secure": true,
+      "session": false,
+      "storeId": null,
+      "value": "995874"
+  },
+  {
+      "domain": "wellfound.com",
+      "expirationDate": 1737031985.294266,
+      "hostOnly": true,
+      "httpOnly": true,
+      "name": "_wellfound",
+      "path": "/",
+      "sameSite": "no_restriction",
+      "secure": true,
+      "session": false,
+      "storeId": null,
+      "value": "9d41fc569eb037ab793f449d27810293.i"
+  },
+  {
+      "domain": ".wellfound.com",
+      "expirationDate": 1766148796.460465,
+      "hostOnly": false,
+      "httpOnly": false,
       "name": "datadome",
-      "value": "mtWz9j5ljkPGkdLW5qChU4cUtQ63u6bd3wdIA5NUy7Pwlq1PU80xGWXwsGLPzHaTXbCSkCPY2~sKrjvMmEWYtehDkxZn2pTJ9w31U4YPGhWDL41685xehxfe6kWFieqo"
-    }
-  ]
+      "path": "/",
+      "sameSite": "lax",
+      "secure": true,
+      "session": false,
+      "storeId": null,
+      "value": "Wyt3ydwWjmxXkS5YhgsJezxocg~VceZNcgtSRc9Az0yf3T1Y72wHC~4HLpll__76zsb9KyGwGLgxU6cXNtP_PjryEJ6roY8SREzyvni~RDk4cQPF9cdtxbgtGIDnu9vT"
+  },
+  {
+      "domain": "wellfound.com",
+      "expirationDate": 1768304720.633677,
+      "hostOnly": true,
+      "httpOnly": false,
+      "name": "logged_in",
+      "path": "/",
+      "sameSite": "no_restriction",
+      "secure": true,
+      "session": false,
+      "storeId": null,
+      "value": "true"
+  }
+]
